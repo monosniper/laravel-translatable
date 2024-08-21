@@ -9,7 +9,7 @@
     @livewireStyles
     <link rel="stylesheet" href="{{ asset('vendor/laravel-translate/css/translate.css') }}">
     <meta name="csrf_token" content="{{ csrf_token() }}"/>
-    @include('vendor.laravel-translate.inc.sprite')
+    @include('translatable::inc.sprite')
 </head>
 <body>
     {{ $slot }}
