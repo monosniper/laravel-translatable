@@ -47,19 +47,19 @@
 
         <div class="header__block_rounded header__block languages">
             <div
-                style="display: {{ count($items[$page]['ru']) ? 'block' : 'none' }}"
+                style="display: {{ count($items[$page]['ru']) ? 'flex' : 'none' }}"
                 data-lang="ru"
                 @class(['languages__item', $language === 'ru' ? 'active' : ''])
             >Русский
             </div>
             <div
-                style="display: {{ count($items[$page]['en']) ? 'block' : 'none' }}"
+                style="display: {{ count($items[$page]['en']) ? 'flex' : 'none' }}"
                 data-lang="en"
                 @class(['languages__item', $language === 'en' ? 'active' : ''])
             >English
             </div>
             <div
-                style="display: {{ count($items[$page]['uz']) ? 'block' : 'none' }}"
+                style="display: {{ count($items[$page]['uz']) ? 'flex' : 'none' }}"
                 data-lang="uz"
                 @class(['languages__item', $language === 'uz' ? 'active' : ''])
             >Uzbek
