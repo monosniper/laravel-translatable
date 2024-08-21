@@ -2,24 +2,24 @@
 
 namespace Monosniper\LaravelTranslatable;
 
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use Monosniper\LaravelTranslatable\Commands\LaravelTranslatableCommand;
 
 class LaravelTranslatableServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
             ->name('laravel-translatable')
             ->hasConfigFile()
+            ->hasAssets()
+            ->hasRoute('web')
             ->hasViews()
-            ->hasMigration('create_laravel_translatable_table')
-            ->hasCommand(LaravelTranslatableCommand::class);
+            ->hasInstallCommand(function(InstallCommand $command) {
+                $command
+                    ->publishConfigFile()
+                    ->publishAssets();
+            });
     }
 }
