@@ -166,11 +166,11 @@ class Translate extends Component
         }
     }
 
-    #[Layout('translatable::components.layouts.app')]
+    #[Layout('translatable::layouts.app')]
     public function render(): View
     {
         $this->dispatch('resize-textarea');
 
-        return view('translatable::livewire.translate');
+        return view('translatable::panel');
     }
 }

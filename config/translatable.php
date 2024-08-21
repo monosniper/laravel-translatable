@@ -1,12 +1,7 @@
 <?php
 
 return [
-    'pages' => [
-        'auth' => 'Авторизация',
-        'pagination' => 'Пагинация',
-        'passwords' => 'Пароли',
-        'test_validation' => 'Тест Авторизация',
-    ],
+    'pages' => [],
 
     'groups' => [
         'kirano_translate_main' => 'Основное',
