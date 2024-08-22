@@ -52,7 +52,7 @@ class Translate extends Component
             ];
 
             $this->initialItems[$page] = collect([
-                'ru' => $this->chunk($data[$page]['ru']),
+                'ru' => $data[$page]['ru'],
                 'en' => $this->chunk($data[$page]['en']),
                 'uz' => $this->chunk($data[$page]['uz']),
             ]);
